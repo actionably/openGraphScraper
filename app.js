@@ -2,11 +2,13 @@ var request = require('request'),
 	cheerio = require('cheerio'),
 	_ = require('lodash');
 
-module.exports = function (options, callback) {
+exports = function (options, callback) {
 	exports.getInfo(options, function (err, results) {
 		callback(err, results);
 	});
 };
+
+module.exports = exports;
 
 var fieldsArray = [
 	{
